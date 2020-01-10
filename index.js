@@ -12,8 +12,6 @@ server.use("/api/recipes", recipeRoute);
 
 server.use((err, req, res, next) => {
     console.log("Error:", err)
-
-    console.log("what in the hell is going on")
   
     res.status(500).json({
       message: "Something went wrong",
@@ -21,5 +19,5 @@ server.use((err, req, res, next) => {
 });
 
 server.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
+    console.log(`Server running on port ${PORT}`);
 });
